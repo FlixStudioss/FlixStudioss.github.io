@@ -1,22 +1,128 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
+    // Hamburger menu functionality
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const closeMenuBtn = document.querySelector('.close-menu');
+    const navMenu = document.querySelector('.nav-menu');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const navLinks = document.querySelectorAll('.nav-links a');
     
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
+    // Open menu
+    hamburgerBtn.addEventListener('click', function() {
+        navMenu.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+    });
+    
+    // Close menu
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    }
+    
+    closeMenuBtn.addEventListener('click', closeMenu);
+    menuOverlay.addEventListener('click', closeMenu);
+    
+    // Page navigation
+    const pageSections = document.querySelectorAll('.page-section');
+    const backToHomeLinks = document.querySelectorAll('.back-to-home a');
+    const featuresBtn = document.querySelector('.features-btn');
+    
+    function navigateToPage(targetId) {
+        // Hide all sections
+        pageSections.forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Show target section
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Close menu if open
+        closeMenu();
+    }
+    
+    // Navigation links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            navigateToPage(targetId);
             
-            // Change icon based on menu state
-            const icon = this.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+            // Update active state in navigation
+            navLinks.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    
+    // Back to home links
+    backToHomeLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateToPage('home');
+            
+            // Update active state in navigation
+            navLinks.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#home') {
+                    item.classList.add('active');
+                }
+            });
+        });
+    });
+    
+    // Features button
+    if (featuresBtn) {
+        featuresBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateToPage('features');
+            
+            // Update active state in navigation
+            navLinks.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#features') {
+                    item.classList.add('active');
+                }
+            });
+        });
+    }
+    
+    // Footer navigation links
+    const footerLinks = document.querySelectorAll('.footer-links a[href^="#"]');
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            navigateToPage(targetId);
+            
+            // Update active state in navigation
+            navLinks.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + targetId) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    });
+    
+    // Download button
+    const downloadBtn = document.querySelector('.download-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigateToPage('home');
+            
+            // Update active state in navigation
+            navLinks.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#home') {
+                    item.classList.add('active');
+                }
+            });
         });
     }
     
@@ -42,61 +148,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Offset for header
-                    behavior: 'smooth'
-                });
-                
-                // Close mobile menu if open
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    const icon = mobileMenuBtn.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
-        });
-    });
-    
-    // Active menu item on scroll
-    const sections = document.querySelectorAll('section[id]');
-    const navItems = document.querySelectorAll('.nav-links a');
-    
-    function highlightNavItem() {
-        const scrollPosition = window.scrollY;
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                navItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${sectionId}`) {
-                        item.classList.add('active');
-                    }
-                });
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', highlightNavItem);
-    
     // Animation on scroll
-    const animateElements = document.querySelectorAll('.feature-card, .app-card, .hero-content, .hero-image, .download-content, .download-image');
+    const animateElements = document.querySelectorAll('.feature-card, .app-content, .app-screenshot, .hero-content, .hero-image, .download-content, .download-image');
     
     // Check if element is in viewport
     function isInViewport(element) {
@@ -122,6 +175,40 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on scroll
     window.addEventListener('scroll', animateOnScroll);
     
+    // Copy code functionality
+    const codeValues = document.querySelectorAll('.code-value');
+    
+    if (codeValues.length > 0) {
+        codeValues.forEach(code => {
+            code.addEventListener('click', function() {
+                // Create temporary textarea
+                const textarea = document.createElement('textarea');
+                textarea.value = this.innerText;
+                document.body.appendChild(textarea);
+                
+                // Select and copy text
+                textarea.select();
+                document.execCommand('copy');
+                
+                // Remove textarea
+                document.body.removeChild(textarea);
+                
+                // Show copied feedback
+                const originalText = this.innerText;
+                this.innerText = 'Copied!';
+                
+                // Reset after a short delay
+                setTimeout(() => {
+                    this.innerText = originalText;
+                }, 1500);
+            });
+            
+            // Add cursor pointer style
+            code.style.cursor = 'pointer';
+            code.setAttribute('title', 'Click to copy');
+        });
+    }
+    
     // Add mobile-specific styling on smaller screens
     function checkMobileView() {
         if (window.innerWidth <= 768) {
@@ -137,34 +224,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Check on resize
     window.addEventListener('resize', checkMobileView);
     
-    // Add responsive styles for the mobile menu
-    function addMobileStyles() {
-        if (!document.getElementById('mobile-styles')) {
+    // Add animation styles
+    function addAnimationStyles() {
+        if (!document.getElementById('animation-styles')) {
             const style = document.createElement('style');
-            style.id = 'mobile-styles';
+            style.id = 'animation-styles';
             style.innerHTML = `
-                @media screen and (max-width: 768px) {
-                    .nav-links.active {
-                        display: flex;
-                        flex-direction: column;
-                        position: absolute;
-                        top: 70px;
-                        left: 0;
-                        width: 100%;
-                        background: white;
-                        padding: 20px;
-                        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-                        z-index: 99;
-                    }
-                    
-                    .nav-links.active li {
-                        margin: 10px 0;
-                    }
+                .app-content, .app-screenshot, .feature-card, .hero-content, .hero-image, .download-content, .download-image {
+                    opacity: 0;
+                    transform: translateY(30px);
+                    transition: opacity 0.6s ease, transform 0.6s ease;
+                }
+                
+                .animate {
+                    opacity: 1;
+                    transform: translateY(0);
                 }
             `;
             document.head.appendChild(style);
         }
     }
     
-    addMobileStyles();
+    addAnimationStyles();
 }); 

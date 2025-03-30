@@ -17,258 +17,283 @@
                 <div class="logo">
                     <h1>Flix<span>Store</span></h1>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#apps">Apps</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                </ul>
-                <div class="mobile-menu">
+                <div class="hamburger-menu">
                     <i class="fas fa-bars"></i>
                 </div>
-                <a href="#download" class="download-btn">Download Now</a>
+                <div class="nav-menu">
+                    <div class="nav-menu-header">
+                        <h2>Menu</h2>
+                        <i class="fas fa-times close-menu"></i>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#eva-iptv">Eva IPTV</a></li>
+                        <li><a href="#bee-addon">Bee Addon Kodi</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="menu-overlay"></div>
+                <a href="https://www.dropbox.com/scl/fi/iw0gciqmj2vnziodfjnup/FlixStore.apk?rlkey=3b1zgvpvke8bz2x51tf72xhde&st=he4619ol&dl=1" class="btn primary-btn">Download FlixStore</a>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Download Premium Apps for Free</h1>
-                <p>FlixStore gives you access to thousands of premium applications without the price tag.</p>
-                <div class="hero-buttons">
-                    <a href="#download" class="btn primary-btn">Download FlixStore</a>
-                    <a href="#learn-more" class="btn secondary-btn">Learn More</a>
+    <div id="page-container">
+        <!-- Home Page -->
+        <section id="home" class="hero page-section active">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Download Premium Apps for Free</h1>
+                    <p>FlixStore gives you access to premium applications without the price tag.</p>
+                    <div class="hero-buttons">
+                        <a href="https://www.dropbox.com/scl/fi/iw0gciqmj2vnziodfjnup/FlixStore.apk?rlkey=3b1zgvpvke8bz2x51tf72xhde&st=he4619ol&dl=1" class="btn primary-btn">Download FlixStore</a>
+                        <a href="#features" class="btn secondary-btn features-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/flix-store.png" alt="FlixStore App">
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero-app.png" alt="FlixStore App">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Why Choose FlixStore</h2>
-                <p>The ultimate platform for premium applications</p>
-            </div>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Fast Downloads</h3>
-                    <p>Enjoy high-speed downloads with our optimized servers around the globe.</p>
+        <!-- Features Section -->
+        <section id="features" class="features page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose FlixStore</h2>
+                    <p>The ultimate platform for premium applications</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure & Safe</h3>
-                    <p>All apps are verified and scanned for malware before being added to our store.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Regular Updates</h3>
-                    <p>Get the latest versions of your favorite premium applications.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Wide Selection</h3>
-                    <p>Thousands of premium apps across various categories to choose from.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="apps" class="popular-apps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Popular Premium Apps</h2>
-                <p>Most downloaded apps on FlixStore</p>
-            </div>
-            <div class="app-grid">
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app1.png" alt="Premium App 1">
-                    </div>
-                    <h3>PhotoPro Editor</h3>
-                    <p>Professional photo editing suite</p>
-                    <div class="app-meta">
-                        <span><i class="fas fa-download"></i> 1.2M+</span>
-                        <span><i class="fas fa-star"></i> 4.8</span>
-                    </div>
-                    <a href="#" class="get-app-btn">Get App</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app2.png" alt="Premium App 2">
-                    </div>
-                    <h3>AudioMaster Pro</h3>
-                    <p>Advanced audio editing software</p>
-                    <div class="app-meta">
-                        <span><i class="fas fa-download"></i> 950K+</span>
-                        <span><i class="fas fa-star"></i> 4.7</span>
-                    </div>
-                    <a href="#" class="get-app-btn">Get App</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app3.png" alt="Premium App 3">
-                    </div>
-                    <h3>VideoFX Suite</h3>
-                    <p>Professional video editing tools</p>
-                    <div class="app-meta">
-                        <span><i class="fas fa-download"></i> 1.5M+</span>
-                        <span><i class="fas fa-star"></i> 4.9</span>
-                    </div>
-                    <a href="#" class="get-app-btn">Get App</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app4.png" alt="Premium App 4">
-                    </div>
-                    <h3>Office Pro Plus</h3>
-                    <p>Complete office productivity suite</p>
-                    <div class="app-meta">
-                        <span><i class="fas fa-download"></i> 2.3M+</span>
-                        <span><i class="fas fa-star"></i> 4.6</span>
-                    </div>
-                    <a href="#" class="get-app-btn">Get App</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app5.png" alt="Premium App 5">
-                    </div>
-                    <h3>SecurityGuard Pro</h3>
-                    <p>Premium antivirus & security</p>
-                    <div class="app-meta">
-                        <span><i class="fas fa-download"></i> 1.8M+</span>
-                        <span><i class="fas fa-star"></i> 4.8</span>
-                    </div>
-                    <a href="#" class="get-app-btn">Get App</a>
-                </div>
-                <div class="app-card">
-                    <div class="app-icon">
-                        <img src="images/app6.png" alt="Premium App 6">
-                    </div>
-                    <h3>VPN Ultimate</h3>
-                    <p>Secure browsing & access</p>
-                    <div class="app-meta">
-                        <span><i class="fas fa-download"></i> 3.1M+</span>
-                        <span><i class="fas fa-star"></i> 4.7</span>
-                    </div>
-                    <a href="#" class="get-app-btn">Get App</a>
-                </div>
-            </div>
-            <div class="view-more">
-                <a href="#" class="btn secondary-btn">View All Apps</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="download" class="download-app">
-        <div class="container">
-            <div class="download-content">
-                <h2>Get FlixStore Now</h2>
-                <p>Download our app and get access to thousands of premium applications for free.</p>
-                <div class="download-platforms">
-                    <a href="#" class="platform-btn">
-                        <i class="fab fa-android"></i>
-                        <div class="platform-text">
-                            <span>Download for</span>
-                            <strong>Android</strong>
+                <div class="feature-cards">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
                         </div>
-                    </a>
-                    <a href="#" class="platform-btn">
-                        <i class="fab fa-windows"></i>
-                        <div class="platform-text">
-                            <span>Download for</span>
-                            <strong>Windows</strong>
+                        <h3>Fast Downloads</h3>
+                        <p>Enjoy high-speed downloads with our optimized servers around the globe.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                    </a>
+                        <h3>Secure & Safe</h3>
+                        <p>All apps are verified and scanned for malware before being added to our store.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Regular Updates</h3>
+                        <p>Get the latest versions of your favorite premium applications.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Wide Selection</h3>
+                        <p>Access to premium apps across various categories to choose from.</p>
+                    </div>
                 </div>
-                <div class="download-stats">
-                    <div class="stat">
-                        <h3>10M+</h3>
-                        <p>Downloads</p>
-                    </div>
-                    <div class="stat">
-                        <h3>4.8</h3>
-                        <p>User Rating</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5000+</h3>
-                        <p>Premium Apps</p>
-                    </div>
+                <div class="back-to-home">
+                    <a href="#home" class="btn secondary-btn">Back to Home</a>
                 </div>
             </div>
-            <div class="download-image">
-                <img src="images/download-mockup.png" alt="FlixStore App Download">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="faq" class="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about FlixStore</p>
+        <!-- Eva IPTV Section -->
+        <section id="eva-iptv" class="app-section page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Eva IPTV</h2>
+                    <p>Premium IPTV service with high-quality streaming</p>
+                </div>
+                <div class="app-details">
+                    <div class="app-info">
+                        <div class="app-content">
+                            <h3>Activation Codes:</h3>
+                            <div class="codes-list">
+                                <div class="code-item">
+                                    <span class="code-name">Opera kod:</span> 
+                                    <span class="code-value">bk5un09</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Banana kod:</span> 
+                                    <span class="code-value">3vk6f1y</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">London kod:</span> 
+                                    <span class="code-value">hg4992z</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Mars kod:</span> 
+                                    <span class="code-value">juyr43q</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Taxi kod:</span> 
+                                    <span class="code-value">m796y4t</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Rumba kod:</span> 
+                                    <span class="code-value">t34g25i</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Tesla kod:</span> 
+                                    <span class="code-value">9t6am6c</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Batman kod:</span> 
+                                    <span class="code-value">2dete73</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Football kod:</span> 
+                                    <span class="code-value">vunm68d</span>
+                                </div>
+                                <div class="code-item">
+                                    <span class="code-name">Stalker kod:</span> 
+                                    <span class="code-value">e9zok95</span>
+                                </div>
+                            </div>
+                            <div class="app-download">
+                                <a href="https://www.dropbox.com/scl/fi/iw0gciqmj2vnziodfjnup/FlixStore.apk?rlkey=3b1zgvpvke8bz2x51tf72xhde&st=he4619ol&dl=1" class="btn primary-btn download-android">
+                                    <i class="fab fa-android"></i> Download for Android
+                                </a>
+                            </div>
+                            <div class="back-to-home">
+                                <a href="#home" class="btn secondary-btn">Back to Home</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="app-screenshot">
+                        <img src="images/eva-iptv.png" alt="Eva IPTV Screenshot">
+                    </div>
+                </div>
             </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Is FlixStore free to use?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, FlixStore is completely free to download and use. We provide premium applications at no cost to our users.</p>
-                    </div>
+        </section>
+
+        <!-- Bee Addon Kodi Section -->
+        <section id="bee-addon" class="app-section page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Bee Addon Kodi</h2>
+                    <p>Premium Kodi addon for high-quality streaming</p>
                 </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Are the apps on FlixStore safe to download?</h3>
-                        <i class="fas fa-chevron-down"></i>
+                <div class="app-details reverse">
+                    <div class="app-info">
+                        <div class="app-content">
+                            <h3>Features:</h3>
+                            <ul class="addon-features">
+                                <li><i class="fas fa-check"></i> Access to thousands of movies and TV shows</li>
+                                <li><i class="fas fa-check"></i> Live TV channels from around the world</li>
+                                <li><i class="fas fa-check"></i> Sports events streaming</li>
+                                <li><i class="fas fa-check"></i> Regular updates with new content</li>
+                                <li><i class="fas fa-check"></i> High-quality streams</li>
+                                <li><i class="fas fa-check"></i> Easy to install and use</li>
+                            </ul>
+                            <div class="app-download">
+                                <a href="https://www.dropbox.com/scl/fi/iw0gciqmj2vnziodfjnup/FlixStore.apk?rlkey=3b1zgvpvke8bz2x51tf72xhde&st=he4619ol&dl=1" class="btn primary-btn download-kodi">
+                                    <i class="fab fa-android"></i> Download for Kodi
+                                </a>
+                            </div>
+                            <div class="back-to-home">
+                                <a href="#home" class="btn secondary-btn">Back to Home</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="faq-answer">
-                        <p>All applications on FlixStore are thoroughly scanned for malware and viruses before being made available for download. We prioritize user safety and security.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>How often are apps updated?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We strive to provide the latest versions of all applications. Most popular apps are updated within 24-48 hours of their official release.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Can I request specific apps to be added?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! We welcome app requests from our users. You can submit requests through the app's feedback section or contact us directly.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Which platforms does FlixStore support?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Currently, FlixStore is available for Android and Windows platforms. We're working on expanding to more platforms in the future.</p>
+                    <div class="app-screenshot">
+                        <img src="images/bee-addon.jpg" alt="Bee Addon Kodi Screenshot">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Download Section -->
+        <section id="download" class="download-app page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get FlixStore Now</h2>
+                    <p>Download our app and get access to premium applications for free</p>
+                </div>
+                <div class="download-content">
+                    <p>Download our app and get access to premium applications for free.</p>
+                    <div class="download-platforms">
+                        <a href="https://www.dropbox.com/scl/fi/iw0gciqmj2vnziodfjnup/FlixStore.apk?rlkey=3b1zgvpvke8bz2x51tf72xhde&st=he4619ol&dl=1" class="platform-btn">
+                            <i class="fab fa-android"></i>
+                            <div class="platform-text">
+                                <span>Download for</span>
+                                <strong>Android</strong>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="back-to-home">
+                        <a href="#home" class="btn secondary-btn">Back to Home</a>
+                    </div>
+                </div>
+                <div class="download-image">
+                    <img src="images/flix-store.png" alt="FlixStore App Download">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq page-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Everything you need to know about FlixStore</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is FlixStore free to use?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, FlixStore is completely free to download and use. We provide premium applications at no cost to our users.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Are the apps on FlixStore safe to download?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All applications on FlixStore are thoroughly scanned for malware and viruses before being made available for download. We prioritize user safety and security.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How often are apps updated?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We strive to provide the latest versions of all applications. Most popular apps are updated within 24-48 hours of their official release.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Can I request specific apps to be added?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! We welcome app requests from our users. You can submit requests through the app's feedback section or contact us directly.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Which platforms does FlixStore support?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Currently, FlixStore is only available for Android devices. We're constantly improving our app to provide the best experience on this platform.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="back-to-home">
+                    <a href="#home" class="btn secondary-btn">Back to Home</a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <div class="container">
@@ -283,7 +308,8 @@
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#features">Features</a></li>
-                            <li><a href="#apps">Apps</a></li>
+                            <li><a href="#eva-iptv">Eva IPTV</a></li>
+                            <li><a href="#bee-addon">Bee Addon Kodi</a></li>
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
