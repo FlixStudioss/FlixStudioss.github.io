@@ -260,8 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 message.innerHTML = `
                     <div class="maintenance-content">
                         <i class="fas fa-tools"></i>
-                        <h3>Under Maintenance</h3>
-                        <p>We're currently updating FlixStore to serve you better. Please check back later.</p>
+                        <h3>Unavailable</h3>
+                        <p>FlixStore is currently unavailable.</p>
                         <button class="close-message">OK</button>
                     </div>
                 `;

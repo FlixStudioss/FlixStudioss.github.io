@@ -935,6 +935,7 @@ footer {
     }
 }
 
+/* Unavailable button styles */
 .maintenance-btn {
     background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%) !important;
     color: white !important;
