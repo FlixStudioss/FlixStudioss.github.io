@@ -933,25 +933,4 @@ footer {
     .download-platforms {
         flex-direction: column;
     }
-}
-
-/* Unavailable button styles */
-.maintenance-btn {
-    background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%) !important;
-    color: white !important;
-    cursor: not-allowed;
-    opacity: 0.9;
-}
-
-.maintenance-btn:hover {
-    transform: none !important;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4) !important;
-}
-
-.platform-btn.maintenance-btn {
-    background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%);
-}
-
-.platform-btn.maintenance-btn i {
-    color: white;
 } 
